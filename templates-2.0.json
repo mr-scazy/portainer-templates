@@ -22,7 +22,7 @@
         },
         {
             "type": 1,
-            "title": "Nginx",
+            "title": "Nginx 1.19",
             "description": "High performance web server",
             "categories": [
                 "webserver"
