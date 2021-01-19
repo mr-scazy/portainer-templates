@@ -22,7 +22,7 @@
         },
         {
             "type": 1,
-            "title": "Nginx 1.19",
+            "title": "Nginx v1.19",
             "description": "High performance web server",
             "categories": [
                 "webserver"
@@ -45,7 +45,7 @@
         },
         {
             "type": 1,
-            "title": "PostgreSQL 12",
+            "title": "PostgreSQL v12",
             "description": "The most advanced open-source database",
             "categories": [
                 "database"
@@ -74,7 +74,7 @@
         },
         {
             "type": 1,
-            "title": "PostgreSQL 13",
+            "title": "PostgreSQL v13",
             "description": "The most advanced open-source database",
             "categories": [
                 "database"
@@ -118,6 +118,28 @@
             "volumes": [
                 {
                     "container": "/var/atlassian/application-data/bitbucket"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "TeamCity",
+            "description": "TeamCity Server",
+            "categories": [
+                "continuous-integration"
+            ],
+            "platform": "linux",
+            "logo": "https://cdn.worldvectorlogo.com/logos/teamcity-icon.svg",
+            "image": "jetbrains/teamcity-server:latest",
+            "ports": [
+                "8111/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/data/teamcity_server/datadir"
+                },
+                {
+                    "container": "/opt/teamcity/logs"
                 }
             ]
         }
