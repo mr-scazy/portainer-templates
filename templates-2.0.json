@@ -145,6 +145,52 @@
                     "container": "/opt/teamcity/temp"
                 }
             ]
+        },
+        {
+            "type": 1,
+            "title": "TeamCity Agent (docker wrapper)",
+            "description": "TeamCity Agent use Docker from the host",
+            "categories": [
+                "continuous-integration"
+            ],
+            "platform": "linux",
+            "logo": "https://cdn.worldvectorlogo.com/logos/teamcity-icon.svg",
+            "image": "jetbrains/teamcity-agent:latest",
+            "env": [
+                {
+                    "name": "SERVER_URL",
+                    "label": "TeamCity Server URL"
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/data/teamcity_agent/conf"
+                },
+                {
+                    "container": "/var/run/docker.sock",
+                    "bind": "/var/run/docker.sock"
+                },
+                {
+                    "container": "/opt/buildagent/work",
+                    "bind": "/opt/buildagent/work"
+                },
+                {
+                    "container": "opt/buildagent/temp",
+                    "bind": "opt/buildagent/temp"
+                },
+                {
+                    "container": "/opt/buildagent/tools",
+                    "bind": "/opt/buildagent/tools"
+                },
+                {
+                    "container": "/opt/buildagent/plugins",
+                    "bind": "/opt/buildagent/plugins"
+                },
+                {
+                    "container": "/opt/buildagent/system",
+                    "bind": "/opt/buildagent/system"
+                }
+            ]
         }
     ]
 }
