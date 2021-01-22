@@ -45,6 +45,32 @@
         },
         {
             "type": 1,
+            "title": "Nginx v1.19 + Certbot",
+            "description": "High performance web server",
+            "categories": [
+                "webserver"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+            "image": "discoversoft/nginx-certbot:latest",
+            "ports": [
+                "80/tcp",
+                "443/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/etc/nginx"
+                },
+                {
+                    "container": "/usr/share/nginx/html"
+                },
+                {
+                    "container": "/etc/letsencrypt/live"
+                }
+            ]
+        },
+        {
+            "type": 1,
             "title": "PostgreSQL v12",
             "description": "The most advanced open-source database",
             "categories": [
