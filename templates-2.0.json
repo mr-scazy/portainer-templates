@@ -160,15 +160,18 @@
             "ports": [
                 "8111/tcp"
             ],
+            "env":[
+                {
+                    "name": "TEAMCITY_HTTPS_PROXY_ENABLED",
+                    "label": "TEAMCITY_HTTPS_PROXY_ENABLED (default=false)"
+                }
+            ],
             "volumes": [
                 {
                     "container": "/data/teamcity_server/datadir"
                 },
                 {
                     "container": "/opt/teamcity/logs"
-                },
-                {
-                    "container": "/opt/teamcity/temp"
                 }
             ]
         },
