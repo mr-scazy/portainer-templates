@@ -172,6 +172,9 @@
                 },
                 {
                     "container": "/opt/teamcity/logs"
+                },
+                {
+                    "container": "/opt/teamcity/temp"
                 }
             ]
         },
