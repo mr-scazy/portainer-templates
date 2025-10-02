@@ -129,6 +129,35 @@
         },
         {
             "type": 1,
+            "title": "PostgreSQL v16",
+            "description": "The most advanced open-source database",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+            "image": "postgres:16",
+            "env": [
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "Superuser"
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "Superuser password"
+                }
+            ],
+            "ports": [
+                "5432/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/lib/postgresql/data"
+                }
+            ]
+        },
+        {
+            "type": 1,
             "title": "Bitbucket",
             "description": "Bitbucket",
             "categories": [
